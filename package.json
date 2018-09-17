@@ -1,0 +1,9 @@
+{
+  "name": "moonphase",
+  "version": "0.1.0",
+  "description": "Packege MoonPhase allow calculat the phase of Moon, and other related veriables.",
+  "main": "index.js",
+  "repository": "git@me.github.com:janczer/moonphase.git",
+  "author": "janczer <menshikov.ivn@gmail.com>",
+  "license": "MIT"
+}
