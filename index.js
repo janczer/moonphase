@@ -43,7 +43,6 @@ class MoonPhase {
 
   // Date
   constructor(date) {
-    console.log(date)
     this._timespace = date.getTime() / 1000
     this._pdata = this.utcToJulian(this._timespace)
 
@@ -332,8 +331,4 @@ class MoonPhase {
   }
 }
 
-const moon = new MoonPhase(new Date())
-
-console.log(moon.newMoon)
-console.log(moon.phaseName())
-console.log(moon.illum)
+module.exports = MoonPhase;

@@ -5,5 +5,31 @@
   "main": "index.js",
   "repository": "git@me.github.com:janczer/moonphase.git",
   "author": "janczer <menshikov.ivn@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "moon",
+    "phase",
+    "MoonPhase"
+  ],
+  "bugs": {
+    "url": "https://github.com/janczer/moonphase/issues"
+  },
+  "homepage": "https://github.com/janczer/moonphase",
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest": true
+    }
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "jest": "^23.6.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage/"
+  }
 }
