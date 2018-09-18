@@ -19,3 +19,17 @@ test('Should be New Moon', () => {
   const m = new MoonPhase(date);
   expect(m.phaseName()).toBe('New Moon');
 });
+
+test('Should be First Quarter', () => {
+  const date = new Date(2018, 9, 17, 1, 14);
+  const m = new MoonPhase(date);
+  expect(m.phaseName()).toBe('First Quarter');
+});
+
+test('Should return the next New Moon Date', () => {
+  const date = new Date(2018, 9, 17, 1, 14);
+  const m = new MoonPhase(date);
+  const dateNewMoon = new Date(m.newMoon * 1000);
+  const expectedDate = new Date(2018, 9, 9, 5, 47, 50, 457);
+  expect(dateNewMoon.getTime()).toBe(expectedDate.getTime());
+});
