@@ -27,9 +27,9 @@ test('Should be First Quarter', () => {
 });
 
 test('Should return the next New Moon Date', () => {
-  const date = new Date(2018, 9, 17, 1, 14);
+  const date = new Date(Date.UTC(2018, 9, 17, 1, 14));
   const m = new MoonPhase(date);
   const dateNewMoon = new Date(m.newMoon * 1000);
-  const expectedDate = new Date(2018, 9, 9, 5, 47, 50, 457);
+  const expectedDate = new Date(Date.UTC(2018, 9, 9, 3, 47, 50, 457));
   expect(dateNewMoon.getTime()).toBe(expectedDate.getTime());
 });
