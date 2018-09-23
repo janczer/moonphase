@@ -9,8 +9,7 @@ test('Should create new instance and return the same date', () => {
 test('Should be 100% illumination', () => {
   const date = new Date(2018, 9, 25, 4, 52);
   const m = new MoonPhase(date);
-  // TODO should be 100
-  expect(Math.round(m.illum)).toBe(1);
+  expect((Number(m.illum)).toFixed(3)).toBe('0.998');
   expect(m.phaseName()).toBe('Full Moon');
 });
 
@@ -33,3 +32,10 @@ test('Should return the next New Moon Date', () => {
   const expectedDate = new Date(Date.UTC(2018, 9, 9, 3, 47, 50, 457));
   expect(dateNewMoon.getTime()).toBe(expectedDate.getTime());
 });
+
+test('Should return the age of moon', () => {
+  const date = new Date(2018, 9, 17, 12, 46);
+  const m = new MoonPhase(date);
+  expect((Number(m.age)).toFixed(3)).toBe('8.000');
+});
+
