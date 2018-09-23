@@ -11,6 +11,33 @@
 
 Packege MoonPhase allow calculat the phase of Moon, and other related veriables. It's base on [php-moon-phase](https://github.com/janczer/goMoonPhase)
 
+# Usage
+
+Add `moonphase-js` dependency:
+
+```bash
+$ yarn add moonphase-js
+```
+
+Now you can use it:
+
+```js
+// index.js
+
+1 const MoonPhase = require('moonphase-js')
+2 
+3 const m = new MoonPhase(new Date(2018, 09, 23))
+4 
+5 console.log((m.illum * 100) + ' %')
+```
+
+Run it:
+
+```bash
+$ node index.js
+96.50252994209721 %
+```
+
 # LICENSE
 
 moonphase is released under the MIT License.
